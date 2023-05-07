@@ -18,7 +18,14 @@ def multisend():
     with open(ADDRESSES_TXT_FILEPATH, 'r') as file:
         addresses = [address.strip() for address in file.readlines()]
         if addresses:
-            withdraw_many(withdrawal_api, script_settings.min_amount, script_settings.max_amount, addresses)
+            withdraw_many(
+                withdrawal_api,
+                script_settings.min_amount,
+                script_settings.max_amount,
+                addresses,
+                script_settings.currency,
+                script_settings.chain,
+            )
         else:
             print('There are no addresses to multisend!')
             print(f'Copy your addresses into {ADDRESSES_TXT_FILEPATH.name}')
