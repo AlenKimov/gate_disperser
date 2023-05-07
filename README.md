@@ -9,7 +9,7 @@
 git clone https://github.com/AlenKimov/gate_disperser
 cd gate_disperser
 ```
-- Установите требуемые библиотеки с помощью Poetry и запустите бота:
+- Установите требуемые библиотеки с помощью Poetry и запустите скрипт:
 ```bash
 poetry update
 poetry run python start.py
