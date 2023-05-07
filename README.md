@@ -6,8 +6,8 @@
 - Установите [git](https://git-scm.com/download/win).
 - С помощью командной строки склонируйте этот репозиторий, после чего перейдите в него:
 ```bash
-git clone https://github.com/AlenKimov/gate_disperser
-cd gate_disperser
+git clone https://github.com/AlenKimov/gate_multisender
+cd gate_multisender
 ```
 - Установите требуемые библиотеки с помощью Poetry и запустите скрипт:
 ```bash
