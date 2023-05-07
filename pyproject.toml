@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "gate-disperser"
+version = "1.0"
+description = "Gate.io disperser"
+authors = ["Alen <alen.kimov@gmail.com>"]
+readme = "README.md"
+packages = [{include = "gate_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+questionary = "^1.10.0"
+gate-api = "^4.45.0"
+pydantic = "^1.10.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
