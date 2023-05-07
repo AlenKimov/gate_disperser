@@ -69,8 +69,15 @@ def ask_script_settings() -> ScriptSettings:
 
     currency_message = 'Enter currency:'
     currency = autocomplete(currency_message, choices=currencies, validate=CurrencyValidator).ask()
-    print('Wait...')
-    chains = [chain.chain for chain in wallet_api.list_currency_chains(currency)]
+    CHAIN_JSON_FILENAME = AUTOCOMPLETE_DIR / f'{currency}_chains.json'
+    if CHAIN_JSON_FILENAME.exists():
+        with open(CHAIN_JSON_FILENAME, 'r') as file:
+            chains = json.load(file)
+    else:
+        print('Wait...')
+        chains = [chain.chain for chain in wallet_api.list_currency_chains(currency)]
+        with open(CHAIN_JSON_FILENAME, 'w') as file:
+            json.dump(chains, file)
     chain = select('Select Chain', choices=chains).ask()
     min_amount = float(text('Min amount:', validate=FloatValidator).ask())
     max_amount = float(text('Max amount:', validate=FloatValidator).ask())
