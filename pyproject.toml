@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "gate-disperser"
-version = "1.0"
-description = "Gate.io disperser"
+name = "gate-multisender"
+version = "1.1"
+description = "Gate.io multisender"
 authors = ["Alen <alen.kimov@gmail.com>"]
 readme = "README.md"
 packages = [{include = "gate_api"}]

@@ -1,4 +1,4 @@
-from gate_disperser import disperse
+from gate_multisender import multisend
 
 if __name__ == '__main__':
-    disperse()
+    multisend()

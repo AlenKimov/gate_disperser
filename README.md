@@ -1,4 +1,4 @@
-# Gate.io disperser
+# Gate.io multisender
 
 ## Запуск под Windows
 - Установите [Python 3.11](https://www.python.org/downloads/windows/). Не забудьте поставить галочку напротив "Add Python to PATH".

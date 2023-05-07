@@ -6,7 +6,8 @@ from .ask import ask_api_settings, ask_script_settings
 from gate_api import Configuration, ApiClient, WithdrawalApi
 
 
-def disperse():
+def multisend():
+    print('Gate.io multisender by @AlenKimov')
     api_settings = ask_api_settings()
     script_settings = ask_script_settings()
 
@@ -19,4 +20,5 @@ def disperse():
         if addresses:
             withdraw_many(withdrawal_api, script_settings.min_amount, script_settings.max_amount, addresses)
         else:
-            print('There are no addresses!')
+            print('There are no addresses to multisend!')
+            print(f'Copy your addresses into {ADDRESSES_TXT_FILEPATH.name}')
