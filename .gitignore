@@ -1,3 +1,4 @@
 .idea
+settings/
+autocomplete/
 addresses.txt
-settings.json
