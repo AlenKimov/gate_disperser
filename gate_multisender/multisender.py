@@ -27,5 +27,7 @@ def multisend():
                 script_settings.chain,
             )
         else:
-            print('There are no addresses to multisend!')
-            print(f'Copy your addresses into {ADDRESSES_TXT_FILEPATH.name}')
+            print('There are no addresses to multisend!'
+                  f'Copy your addresses into {ADDRESSES_TXT_FILEPATH.name}'
+                  'Make sure you make the addresses trusted here:\n'
+                  'https://www.gate.io/myaccount/add_withdraw_address_list')
